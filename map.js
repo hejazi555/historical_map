@@ -88,9 +88,8 @@ const addPoint = (item, type) => {
         icon: L.divIcon({
             className: 'location-label',
             html: `${item.name}${type === 'city' ? '<div class="location-info">مدينة</div>' : 
-                  item.type === 'historical' ? '<div class="location-info"> </div>' : 
                   item.type === 'religious' ? '<div class="location-info">موقع ديني</div>' : 
-                  item.type === 'historical' ? ` ${item.additional_info}`: 
+                  item.type === 'historical' ? ` <div class="location-info">${item.additional_info}</div>`: 
 
                   '<div class="location-info">معلم سياحي</div>'}`,
             iconSize: [120, 40],
@@ -101,7 +100,7 @@ const addPoint = (item, type) => {
     point.bindPopup(`
         <strong>${item.name}</strong><br>
         ${type === 'city' ? `وصف: ${item.additional_info}` : 
-         `النوع: ${item.type === 'historical' ? ' ' : 
+         `النوع: ${item.type === 'historical' ? `${item.additional_info}` : 
                   item.type === 'religious' ? 'موقع ديني' : 'معلم سياحي'}`}<br>
         <a href="https://www.google.com/maps/search/?api=1&query=${item.coordinates[0]},${item.coordinates[1]}" target="_blank">عرض في خرائط Google</a>
     `);
