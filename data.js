@@ -201,7 +201,7 @@ const mapData = {
         37.9545
       ],
       "type": "historical",
-      "additional_info": "شعب"
+      "additional_info": ""
     },
     {
       "name": "الدرعية التاريخية",
@@ -210,7 +210,7 @@ const mapData = {
         46.5762
       ],
       "type": "historical",
-      "additional_info": "شعب"
+      "additional_info": ""
     }
   ]
 };
