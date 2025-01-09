@@ -145,7 +145,7 @@ const mapData = {
         46.6753
       ],
       "type": "city",
-      "population": "7.6 مليون"
+      "additional_info": "نتمت"
     },
     {
       "name": "الحنو",
@@ -154,7 +154,7 @@ const mapData = {
         46.6753
       ],
       "type": "city",
-      "population": "7.6 مليون"
+      "additional_info": "نتم"
     },
     {
       "name": "مكة المكرمة",
@@ -163,7 +163,7 @@ const mapData = {
         39.8262
       ],
       "type": "city",
-      "population": "2.0 مليون"
+      "additional_info": "تنم"
     },
     {
       "name": "المدينة المنورة",
@@ -172,7 +172,7 @@ const mapData = {
         39.6112
       ],
       "type": "city",
-      "population": "1.5 مليون"
+      "additional_info": "تنم"
     },
     {
       "name": "جدة",
@@ -181,7 +181,7 @@ const mapData = {
         39.1728
       ],
       "type": "city",
-      "population": "4.1 مليون"
+      "additional_info": "نتم"
     },
     {
       "name": "الدمام",
@@ -190,7 +190,7 @@ const mapData = {
         50.0888
       ],
       "type": "city",
-      "population": "1.2 مليون"
+      "additional_info": "باابلالبالبابلكمامبانملبنمابلنمكامنكلامنكبلنامكلبنمكابلنمكالبنمكنلمكانمبك بنملانامكلبنكمانمكلبنماكبلنمابلنمابملننمكبل نابملنالبنمكابلنمكنلمكبلنمكنماك بملنبلانكمبلاكنملبنماك لبمنمكلبكنملبمنكلبكمنلبانمك لبانمكلبانمكلبنمكلبانممك نمبكلنمبكلنمبنكلمنملباك"
     }
   ],
   "locations": [
@@ -200,7 +200,8 @@ const mapData = {
         26.8088,
         37.9545
       ],
-      "type": "historical"
+      "type": "historical",
+      "description": "شعب"
     },
     {
       "name": "الدرعية التاريخية",
@@ -208,7 +209,8 @@ const mapData = {
         24.7442,
         46.5762
       ],
-      "type": "historical"
+      "type": "historical",
+      "description": "شعب"
     }
   ]
 };

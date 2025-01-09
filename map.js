@@ -1,6 +1,6 @@
 // إنشاء الخريطة مع تحديد حدود التكبير والتصغير
 const map = L.map('map', {
-    minZoom: 4,
+    minZoom: 2,
     maxZoom: 10,
     zoomControl: false,
     preferCanvas: true // true
@@ -13,7 +13,7 @@ L.control.zoom({
 // إضافة طبقة الخريطة الأساسية
 const baseLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
     maxZoom: 10,
-    minZoom: 4,
+    minZoom: 2,
     attribution: '© OpenStreetMap, © CartoDB',
     updateWhenIdle: true, //true
     keepBuffer: 2
