@@ -1,7 +1,7 @@
 // إنشاء الخريطة مع تحديد حدود التكبير والتصغير
 const map = L.map('map', {
-    minZoom: 4,
-    maxZoom: 10,
+    minZoom: 2,
+    maxZoom: 12,
     zoomControl: false,
     preferCanvas: true // true
 }).setView([24.7136, 46.6753], 6);
@@ -12,8 +12,8 @@ L.control.zoom({
 }).addTo(map);
 // إضافة طبقة الخريطة الأساسية
 const baseLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-    maxZoom: 10,
-    minZoom: 4,
+    maxZoom: 12,
+    minZoom: 2,
     attribution: '© OpenStreetMap, © CartoDB',
     updateWhenIdle: true, //true
     keepBuffer: 2
@@ -88,9 +88,8 @@ const addPoint = (item, type) => {
         icon: L.divIcon({
             className: 'location-label',
             html: `${item.name}${type === 'city' ? '<div class="location-info">مدينة</div>' : 
+                  item.type === 'historical' ? '<div class="location-info">موقع تاريخي</div>' : 
                   item.type === 'religious' ? '<div class="location-info">موقع ديني</div>' : 
-                  item.type === 'historical' ? ` <div class="location-info">${item.description}</div>`: 
-
                   '<div class="location-info">معلم سياحي</div>'}`,
             iconSize: [120, 40],
             iconAnchor: [60, -5]
@@ -99,8 +98,8 @@ const addPoint = (item, type) => {
 
     point.bindPopup(`
         <strong>${item.name}</strong><br>
-        ${type === 'city' ? `وصف: ${item.additional_info}` : 
-         `النوع: ${item.type === 'historical' ? `${item.description}` : 
+        ${type === 'city' ? `عدد السكان: ${item.population}` : 
+         `النوع: ${item.type === 'historical' ? 'موقع تاريخي' : 
                   item.type === 'religious' ? 'موقع ديني' : 'معلم سياحي'}`}<br>
         <a href="https://www.google.com/maps/search/?api=1&query=${item.coordinates[0]},${item.coordinates[1]}" target="_blank">عرض في خرائط Google</a>
     `);
